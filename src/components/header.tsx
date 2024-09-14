@@ -1,5 +1,6 @@
-import React from 'react';
-import { UseMyThemeContext } from '../contexts/theme-context'
+import React from "react";
+import { UseMyThemeContext } from "../contexts/theme-context"
+import { Link } from "react-router-dom";
 
 export default function Header (){
     const {valueTheme, setThemeValue} = UseMyThemeContext();
@@ -8,13 +9,13 @@ export default function Header (){
             <h1>LOGO EMPRESA</h1>
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>Sobre</li>
-                    <li>Suport</li>
+                    <li><Link to="/"> Home</Link></li>
+                    <li> <Link to="/pages/sobre">Sobre</Link></li>
+                    <li><Link to="/">Suport</Link></li>
                 </ul>
             </nav>
-            <button onClick={() => {setThemeValue('Light')}}>Light</button>
-            <button onClick={() => {setThemeValue('Dark')}}>Dark</button>
+            <button onClick={() => {setThemeValue("Light")}}>Light</button>
+            <button onClick={() => {setThemeValue("Dark")}}>Dark</button>
         </header>
     )
 }
