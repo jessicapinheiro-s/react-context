@@ -3,7 +3,7 @@ import { UseMyThemeContext } from "../contexts/theme-context"
 import { Link } from "react-router-dom";
 
 export default function Header (){
-    const {valueTheme, setThemeValue} = UseMyThemeContext();
+    const {setThemeValue} = UseMyThemeContext();
     return(
         <header>
             <h1>LOGO EMPRESA</h1>
