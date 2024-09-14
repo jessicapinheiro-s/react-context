@@ -1,11 +1,18 @@
 import Header from "../components/header";
-import { ProviderThemeContext } from "../contexts/theme-context";
+import { UseMyThemeContext } from "../contexts/theme-context";
 
+
+
+const themeStyles = {
+    Light: { background: '#fff', color: '#000', padding: 0, margin: 0 },
+    Dark: { background: '#262626', color: '#fff', padding: 0, margin: 0 },
+  };
 export default function Sobre () {
+    const { valueTheme } = UseMyThemeContext();
     return(
-        <ProviderThemeContext>
+        <div style={themeStyles[valueTheme]}>
             <Header/>
-            <h1>Sobre</h1>
-        </ProviderThemeContext>
+            <h1>Suport</h1>
+        </div>
     )
 }

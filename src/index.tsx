@@ -11,19 +11,20 @@ import {
 } from "react-router-dom";
 import Sobre from './pages/sobre';
 import Suport from './pages/suport';
+import { ProviderThemeContext } from './contexts/theme-context';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
   {
     path: "/pages/sobre",
-    element: <Sobre/>,
+    element: <Sobre />,
   },
   {
     path: "/pages/suport",
-    element: <Suport/>,
+    element: <Suport />,
   }
 ]);
 
@@ -33,7 +34,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ProviderThemeContext>
+      <RouterProvider router={router} />
+    </ProviderThemeContext>
   </React.StrictMode>
 );
 
