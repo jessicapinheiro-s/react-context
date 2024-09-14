@@ -10,6 +10,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Sobre from './pages/sobre';
+import Suport from './pages/suport';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,10 @@ const router = createBrowserRouter([
     path: "/pages/sobre",
     element: <Sobre/>,
   },
-  
+  {
+    path: "/pages/suport",
+    element: <Suport/>,
+  }
 ]);
 
 
