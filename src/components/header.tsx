@@ -7,9 +7,9 @@ export default function Header (){
     const {setThemeValue} = UseMyThemeContext();
     
     return(
-            <header className="flex flex-row items-center justify-between py-[15px] px-[50px] bg-gray-20">
+            <header className="flex flex-row items-center justify-between py-[15px] px-[50px] bg-gray-20 border-b">
             <h1>LOGO EMPRESA</h1>
-            <nav className="w-6/12">
+            <nav className="w-4/12">
                 <ul className="flex list-none flex flex-row items-center justify-between">
                     <li><Link to="/"> Home</Link></li>
                     <li> <Link to="/pages/sobre">Sobre</Link></li>
