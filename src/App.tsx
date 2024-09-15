@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { UseMyThemeContext } from './contexts/theme-context';
+import Header from './components/header';
+const themeStyles = {
+  Light: { background: '#fff', color: '#000', padding: 0, margin: 0 },
+  Dark: { background: '#262626', color: '#fff', padding: 0, margin: 0 },
+};
 function App() {
+  const { valueTheme } = UseMyThemeContext();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={themeStyles[valueTheme]}>
+      <Header />
+      <main>
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam minima consequuntur consectetur iure aliquam cupiditate aut maiores obcaecati rem voluptatibus expedita animi, beatae cum maxime non est, at illum?
+        </section>
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam minima consequuntur consectetur iure aliquam cupiditate aut maiores obcaecati rem voluptatibus expedita animi, beatae cum maxime non est, at illum?
+        </section>
+        <aside>
+          jfoawfáe fawefnaióewfae fakfewifwefefee fefjefe fef e fe fjenfowefw few fwfef efe efeofihÉ Feknifwe fewfiwehihtl ~l dams,mf f4f4f4f 4 
+        </aside>
+      </main>
+      <h1>App</h1>
     </div>
   );
 }

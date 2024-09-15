@@ -1,15 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
+import './main.css';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Sobre from './pages/sobre';
+import Suport from './pages/suport';
+import { ProviderThemeContext } from './contexts/theme-context';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/pages/sobre",
+    element: <Sobre />,
+  },
+  {
+    path: "/pages/suport",
+    element: <Suport />,
+  }
+]);
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ProviderThemeContext>
+      <RouterProvider router={router} />
+    </ProviderThemeContext>
   </React.StrictMode>
 );
 
