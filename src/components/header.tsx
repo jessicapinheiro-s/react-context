@@ -16,8 +16,8 @@ export default function Header (){
                     <li><Link to="/pages/suport">Suport</Link></li>
                 </ul>
             </nav>
-            <button className="py-[10px] px-[15px] bg-red-300" onClick={() => {setThemeValue("Light")}}>Light</button>
-            <button className="py-[10px] px-[15px] bg-blue-300" onClick={() => {setThemeValue("Dark")}}>Dark</button>
+            <button className="py-[10px] px-[15px] bg-red-300 rounded-xl" onClick={() => {setThemeValue("Light")}}>Light</button>
+            <button className="py-[10px] px-[15px] bg-blue-300 rounded-xl" onClick={() => {setThemeValue("Dark")}}>Dark</button>
         </header>
     )
 }
