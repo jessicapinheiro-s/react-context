@@ -6,10 +6,18 @@ import { LockKeyhole, BugOff, Check, ChartColumnIncreasing } from 'lucide-react'
 import { CardIcon } from './components/card-icon';
 import Home from './pages/home';
 
-function App() {
 
+const themeStyles = {
+  Light: { background: '#fff', color: '#000', padding: 0, margin: 0 },
+  Dark: { background: '#262626', color: '#e5e5e5', padding: 0, margin: 0 },
+};
+
+function App() {
+  const { valueTheme } = UseMyThemeContext();
   return (
-    <Home />
+    <div style={themeStyles[valueTheme]} >
+      <Home />
+    </div >
   );
 }
 
