@@ -7,7 +7,7 @@ import Suport from './pages/suport';
 
 const themeStyles = {
   Light: { background: '#fff', color: '#000', padding: 0, margin: 0 },
-  Dark: { background: '#262626', color: '#e5e5e5', padding: 0, margin: 0 },
+  Dark: { background: '#262626', color: '#e5e5e5', padding: 0, margin: 0},
 };
 
 function App() {

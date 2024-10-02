@@ -7,11 +7,11 @@ export default function Header() {
     const { setThemeValue } = UseMyThemeContext();
     const themeStyles = {
         Light: { background: '#fff', color: '#000' },
-        Dark: { background: '#2d2d2d', color: '#e5e5e5', border: 'none' },
+        Dark: { background: '#313131', color: '#e5e5e5', border: 'none' },
     };
     const { valueTheme } = UseMyThemeContext();
     return (
-        <header className="flex flex-row items-center justify-between py-[15px] px-[50px] bg-gray-20 border-b" style={themeStyles[valueTheme]}>
+        <header className="flex flex-row items-center justify-between py-[15px] px-[160px] bg-gray-20 border-b" style={themeStyles[valueTheme]}>
             <h1>LOGO EMPRESA</h1>
             <nav className="w-4/12">
                 <ul className="flex list-none flex flex-row items-center justify-between">
