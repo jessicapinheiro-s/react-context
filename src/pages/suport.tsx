@@ -17,7 +17,7 @@ export default function Suport() {
         <div style={themeStyles[valueTheme]} className='h-full'>
             <Header />
             <ContainerBig Title={"Support"} Description={text} />
-            <div className="flex w-full justify-around">
+            <div className="flex justify-between mx-40 mb-2.5">
                 <CardIcon Title={"Segurança"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<LockKeyhole />}/>
                 <CardIcon Title={"Melhores Práticas"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<BugOff />}/>
                 <CardIcon Title={"Flexibilidade"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<Check />}/>

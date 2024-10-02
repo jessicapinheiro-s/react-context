@@ -1,5 +1,3 @@
-import React from 'react';
-import { UseMyThemeContext } from '../contexts/theme-context';
 import Header from '../components/header';
 import { ContainerBig } from '../components/container-big';
 import { LockKeyhole, BugOff, Check, ChartColumnIncreasing } from 'lucide-react';
@@ -7,11 +5,12 @@ import { CardIcon } from '../components/card-icon';
 import { ContainerBigDuplo } from '../components/container-duplo';
 import { ContainerImg } from '../components/container-img';
 import img from '../imgs/11240811.jpg';
+import Footer from '../components/footer';
 
 function Home() {
 
     return (
-        <div  className='h-full'>
+        <div className='h-full'>
             <Header />
             <ContainerBig Title={"Home"} Description={"This is a home page wich the principal function is.."} />
             <div className="flex justify-between mx-40 mb-2.5">
@@ -22,6 +21,7 @@ function Home() {
             </div>
             <ContainerBigDuplo Title={'Lets make part of the TEAM!'} Description={'jslbfjsfkjsdbfak fajdbfkafça djfa dkfa çdk faj dfjka dfjk adfjk kjaf sa fakjçfa f jka fçja k fa'} TextButton={'Lets Do it'} SubTitle={'What are you waiting for'} />
             <ContainerImg imgCaminho={img} TextButton={'Join us!'} Title={'Are ready to get into a new adventure?'}/>
+            <Footer/>
         </div>
     );
 }

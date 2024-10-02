@@ -11,7 +11,7 @@ export default function Header() {
     };
     const { valueTheme } = UseMyThemeContext();
     return (
-        <header className="flex flex-row items-center justify-between py-[15px] px-[160px] bg-gray-20 border-b" style={themeStyles[valueTheme]}>
+        <header className="flex flex-row items-center justify-between py-[25px] px-[160px] bg-gray-20 border-b" style={themeStyles[valueTheme]}>
             <h1>LOGO EMPRESA</h1>
             <nav className="w-4/12">
                 <ul className="flex list-none flex flex-row items-center justify-between">
