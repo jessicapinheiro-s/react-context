@@ -3,11 +3,15 @@ import { ProviderThemeContext, UseMyThemeContext } from "../contexts/theme-conte
 import { Link } from "react-router-dom";
 import '../main.css'
 
-export default function Header (){
-    const {setThemeValue} = UseMyThemeContext();
-    
-    return(
-            <header className="flex flex-row items-center justify-between py-[15px] px-[50px] bg-gray-20 border-b">
+export default function Header() {
+    const { setThemeValue } = UseMyThemeContext();
+    const themeStyles = {
+        Light: { background: '#fff', color: '#000' },
+        Dark: { background: '#2d2d2d', color: '#e5e5e5', border: 'none' },
+    };
+    const { valueTheme } = UseMyThemeContext();
+    return (
+        <header className="flex flex-row items-center justify-between py-[15px] px-[50px] bg-gray-20 border-b" style={themeStyles[valueTheme]}>
             <h1>LOGO EMPRESA</h1>
             <nav className="w-4/12">
                 <ul className="flex list-none flex flex-row items-center justify-between">
@@ -16,8 +20,8 @@ export default function Header (){
                     <li><Link to="/pages/suport">Suport</Link></li>
                 </ul>
             </nav>
-            <button className="py-[10px] px-[15px] bg-red-300 rounded-xl" onClick={() => {setThemeValue("Light")}}>Light</button>
-            <button className="py-[10px] px-[15px] bg-blue-300 rounded-xl" onClick={() => {setThemeValue("Dark")}}>Dark</button>
+            <button className="py-[10px] px-[15px] bg-red-300 rounded-xl" onClick={() => { setThemeValue("Light") }}>Light</button>
+            <button className="py-[10px] px-[15px] bg-blue-300 rounded-xl" onClick={() => { setThemeValue("Dark") }}>Dark</button>
         </header>
     )
 }

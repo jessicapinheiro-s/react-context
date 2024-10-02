@@ -1,10 +1,8 @@
-import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { UseMyThemeContext } from './contexts/theme-context';
-import Header from './components/header';
-import { ContainerBig } from './components/container-big';
-import { LockKeyhole, BugOff, Check, ChartColumnIncreasing } from 'lucide-react';
-import { CardIcon } from './components/card-icon';
 import Home from './pages/home';
+import Sobre from './pages/sobre';
+import Suport from './pages/suport';
 
 
 const themeStyles = {
@@ -16,7 +14,11 @@ function App() {
   const { valueTheme } = UseMyThemeContext();
   return (
     <div style={themeStyles[valueTheme]} >
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/pages/sobre" element={<Sobre />} />
+        <Route path="/pages/suport" element={<Suport />} />
+      </Routes>
     </div >
   );
 }
