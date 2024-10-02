@@ -1,5 +1,5 @@
 import React from "react";
-import { ProviderThemeContext, UseMyThemeContext } from "../contexts/theme-context"
+import { UseMyThemeContext } from "../contexts/theme-context"
 import { Link } from "react-router-dom";
 import '../main.css'
 
@@ -18,6 +18,8 @@ export default function Header() {
                     <li><Link to="/"> Home</Link></li>
                     <li> <Link to="/pages/sobre">Sobre</Link></li>
                     <li><Link to="/pages/suport">Suport</Link></li>
+                    <li><Link to="/pages/login">Login</Link></li> 
+                    <li><Link to="/pages/signIn">Sign In</Link></li> 
                 </ul>
             </nav>
             <button className="py-[10px] px-[15px] bg-red-300 rounded-xl" onClick={() => { setThemeValue("Light") }}>Light</button>
