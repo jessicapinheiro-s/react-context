@@ -1,3 +1,4 @@
+import Form from "../components/Form";
 import { UseMyThemeContext } from "../contexts/theme-context"
 
 export default function Login() {
@@ -7,11 +8,10 @@ export default function Login() {
     };
     const { valueTheme } = UseMyThemeContext();
     return (
-        <form action="">
-            <input type="email"  className="border"/>
-            <input type="password" className="border" />
-            <button type="submit" className="border">Login</button>
-        </form>
+        <div className="items-center flex flex-col justify-center h-full">
+            <Form />
+        </div>
+
 
     )
 }
