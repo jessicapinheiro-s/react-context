@@ -17,7 +17,7 @@ export function ContainerImg(props: ContainerImgProps) {
     const { valueTheme } = UseMyThemeContext();
     return (
         <div className="grid grid-cols-2 grid-rows-1  mx-40 mb-2.5  py-[25px]">
-            <div className="flex flex-col items-start justify-center gap-6  h-full rounded-xl" style={themeStyles[valueTheme]}>
+            <div className="flex flex-col items-start justify-center gap-6  h-full rounded-xl " style={themeStyles[valueTheme]}>
                 <h2 className="text-4xl ">{Title}</h2>
                 <button className="py-2 px-4 bg-purple-500 rounded-xl w-1/2 text-white" >{TextButton}</button>
             </div>
