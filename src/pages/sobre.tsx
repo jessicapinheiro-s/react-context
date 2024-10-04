@@ -1,4 +1,5 @@
 import { ContainerBig } from "../components/container-big";
+import Footer from "../components/footer";
 import Header from "../components/header";
 import { UseMyThemeContext } from "../contexts/theme-context";
 
@@ -15,6 +16,7 @@ export default function Sobre () {
         <div style={themeStyles[valueTheme]} className='h-full'>
             <Header/>
             <ContainerBig Title={"About us"} Description={text}/>
+            <Footer/>
         </div>
     )
 }

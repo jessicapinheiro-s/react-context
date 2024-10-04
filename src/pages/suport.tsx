@@ -3,6 +3,7 @@ import { CardIcon } from "../components/card-icon";
 import { ContainerBig } from "../components/container-big";
 import Header from "../components/header";
 import { UseMyThemeContext } from "../contexts/theme-context";
+import Footer from "../components/footer";
 
 
 const themeStyles = {
@@ -22,6 +23,7 @@ export default function Suport() {
                 <CardIcon Title={"Melhores Práticas"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<BugOff />}/>
                 <CardIcon Title={"Flexibilidade"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<Check />}/>
                 <CardIcon Title={"Desempenho"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<ChartColumnIncreasing />}/>
+                <Footer/>
             </div>
         </div>
     )
