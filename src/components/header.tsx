@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { UseMyThemeContext } from "../contexts/theme-context"
 import { Link } from "react-router-dom";
 import '../main.css'
@@ -6,8 +6,9 @@ import { Moon, SunMoon } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Header() {
+    const [key, setKey] = useState(0);
     const { setThemeValue, valueTheme } = UseMyThemeContext();
-    
+
     const themeStyles = {
         Light: { background: '#fff', color: '#000' },
         Dark: { background: '#313131', color: '#e5e5e5', border: 'none' },
@@ -15,6 +16,7 @@ export default function Header() {
 
     function handleTheme() {
         //window.document.getElementById('root')
+        setKey(prevKey => prevKey + 1);
         valueTheme === 'Light' ? setThemeValue("Dark") : setThemeValue("Light")
     }
     return (
@@ -32,6 +34,7 @@ export default function Header() {
             {
                 (
                     <motion.div
+                        key={key}
                         animate={{ rotate: 360 }}
                         transition={{ duration: 1, repeat: 0, ease: "linear" }}
                         style={{ display: 'inline-block' }}
@@ -47,4 +50,8 @@ export default function Header() {
 
         </header>
     )
+}
+
+function setKey(arg0: (prevKey: any) => any) {
+    throw new Error("Function not implemented.");
 }
