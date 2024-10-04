@@ -3,15 +3,17 @@ import { UseMyThemeContext } from "../contexts/theme-context"
 import { Link } from "react-router-dom";
 import '../main.css'
 import { Moon, SunMoon } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Header() {
     const { setThemeValue, valueTheme } = UseMyThemeContext();
+    
     const themeStyles = {
         Light: { background: '#fff', color: '#000' },
         Dark: { background: '#313131', color: '#e5e5e5', border: 'none' },
     };
 
-    function handleTheme () {
+    function handleTheme() {
         //window.document.getElementById('root')
         valueTheme === 'Light' ? setThemeValue("Dark") : setThemeValue("Light")
     }
@@ -23,15 +25,26 @@ export default function Header() {
                     <li><Link to="/"> Home</Link></li>
                     <li> <Link to="/pages/sobre">Sobre</Link></li>
                     <li><Link to="/pages/suport">Suport</Link></li>
-                    <li><Link to="/pages/login">Login</Link></li> 
-                    <li><Link to="/pages/signIn">Sign In</Link></li> 
+                    <li><Link to="/pages/login">Login</Link></li>
+                    <li><Link to="/pages/signIn">Sign In</Link></li>
                 </ul>
             </nav>
             {
-                (valueTheme === 'Dark' ? <Moon  onClick={handleTheme}/> : <SunMoon onClick={handleTheme}/>)
+                (
+                    <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: 0, ease: "linear" }}
+                        style={{ display: 'inline-block' }}
+                    >
+                        {
+                            valueTheme === 'Dark' ? <Moon onClick={handleTheme} /> : <SunMoon onClick={handleTheme} />
+                        }
+                    </motion.div>
+
+                )
             }
-            
-            
+
+
         </header>
     )
 }
