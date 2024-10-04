@@ -2,14 +2,19 @@ import React from "react";
 import { UseMyThemeContext } from "../contexts/theme-context"
 import { Link } from "react-router-dom";
 import '../main.css'
+import { Moon, SunMoon } from "lucide-react";
 
 export default function Header() {
-    const { setThemeValue } = UseMyThemeContext();
+    const { setThemeValue, valueTheme } = UseMyThemeContext();
     const themeStyles = {
         Light: { background: '#fff', color: '#000' },
         Dark: { background: '#313131', color: '#e5e5e5', border: 'none' },
     };
-    const { valueTheme } = UseMyThemeContext();
+
+    function handleTheme () {
+        //window.document.getElementById('root')
+        valueTheme === 'Light' ? setThemeValue("Dark") : setThemeValue("Light")
+    }
     return (
         <header className="flex flex-row items-center justify-between py-[25px] px-[160px] bg-gray-20 border-b" style={themeStyles[valueTheme]}>
             <h1>LOGO EMPRESA</h1>
@@ -22,8 +27,11 @@ export default function Header() {
                     <li><Link to="/pages/signIn">Sign In</Link></li> 
                 </ul>
             </nav>
-            <button className="py-[10px] px-[15px] bg-red-300 rounded-xl" onClick={() => { setThemeValue("Light") }}>Light</button>
-            <button className="py-[10px] px-[15px] bg-blue-300 rounded-xl" onClick={() => { setThemeValue("Dark") }}>Dark</button>
+            {
+                (valueTheme === 'Dark' ? <Moon  onClick={handleTheme}/> : <SunMoon onClick={handleTheme}/>)
+            }
+            
+            
         </header>
     )
 }
