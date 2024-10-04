@@ -4,21 +4,17 @@ import { Link } from "react-router-dom";
 import '../main.css'
 import { Moon, SunMoon } from "lucide-react";
 import { motion } from "framer-motion";
+import ThemeIcon from "./theme-Icon";
 
 export default function Header() {
-    const [key, setKey] = useState(0);
-    const { setThemeValue, valueTheme } = UseMyThemeContext();
+    const { valueTheme } = UseMyThemeContext();
 
     const themeStyles = {
         Light: { background: '#fff', color: '#000' },
         Dark: { background: '#313131', color: '#e5e5e5', border: 'none' },
     };
 
-    function handleTheme() {
-        //window.document.getElementById('root')
-        setKey(prevKey => prevKey + 1);
-        valueTheme === 'Light' ? setThemeValue("Dark") : setThemeValue("Light")
-    }
+   
     return (
         <header className="flex flex-row items-center justify-between py-[25px] px-[160px] bg-gray-20 border-b" style={themeStyles[valueTheme]}>
             <h1>LOGO EMPRESA</h1>
@@ -31,23 +27,7 @@ export default function Header() {
                     <li><Link to="/pages/signIn">Sign In</Link></li>
                 </ul>
             </nav>
-            {
-                (
-                    <motion.div
-                        key={key}
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 1, repeat: 0, ease: "linear" }}
-                        style={{ display: 'inline-block' }}
-                    >
-                        {
-                            valueTheme === 'Dark' ? <Moon onClick={handleTheme} /> : <SunMoon onClick={handleTheme} />
-                        }
-                    </motion.div>
-
-                )
-            }
-
-
+            <ThemeIcon/>
         </header>
     )
 }
