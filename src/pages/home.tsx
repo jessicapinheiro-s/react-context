@@ -10,7 +10,7 @@ import Footer from '../components/footer';
 function Home() {
 
     return (
-        <div className='h-full'>
+        <div>
             <Header />
             <ContainerBig Title={"Home"} Description={"This is a home page wich the principal function is.."} />
             <div className="flex justify-between mx-40 mb-2.5">

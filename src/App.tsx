@@ -15,7 +15,7 @@ const themeStyles = {
 function App() {
   const { valueTheme } = UseMyThemeContext();
   return (
-    <div style={themeStyles[valueTheme]} >
+    <div style={themeStyles[valueTheme]} className='h-full' >
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pages/sobre" element={<Sobre />} />
