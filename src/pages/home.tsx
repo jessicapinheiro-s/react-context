@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 function Home() {
 
     return (
-        <div className='h-full  bg-back-light dark:bg-back-dark text-color-light dark:text-color-dark'>
+        <div className='flex flex-col min-h-screen justify-between  bg-back-light dark:bg-back-dark text-color-light dark:text-color-dark'>
             <Header />
             <ContainerBig Title={"Home"} Description={"This is a home page wich the principal function is.."} />
             <div className="flex justify-between mx-40 mb-2.5 py-[25px]">
