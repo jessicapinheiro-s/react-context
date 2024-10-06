@@ -14,7 +14,7 @@ export default function Suport() {
         <div className='flex flex-col min-h-screen justify-between'>
             <Header />
             <ContainerBig Title={"Support"} Description={text} />
-            <div className="flex justify-between mx-40 mb-2.5 py-[25px]">
+            <div className="flex justify-between mx-40 mb-2.5 py-[25px] flex-wrap gap-6">
                 <CardIcon Title={"Segurança"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<LockKeyhole />}/>
                 <CardIcon Title={"Melhores Práticas"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<BugOff />}/>
                 <CardIcon Title={"Flexibilidade"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<Check />}/>
