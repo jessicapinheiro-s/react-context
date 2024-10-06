@@ -13,7 +13,7 @@ function Home() {
         <div className='flex flex-col min-h-screen justify-between  bg-back-light dark:bg-back-dark text-color-light dark:text-color-dark'>
             <Header />
             <ContainerBig Title={"Home"} Description={"This is a home page wich the principal function is.."} />
-            <div className="flex justify-between mx-40 mb-2.5 py-[25px] flex-wrap gap-6">
+            <div className="flex justify-between sm:mx-40 mx-20 mb-2.5 py-[25px] flex-wrap gap-6">
                 <CardIcon Title={"Segurança"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<LockKeyhole />} />
                 <CardIcon Title={"Melhores Práticas"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<BugOff />} />
                 <CardIcon Title={"Flexibilidade"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<Check />} />

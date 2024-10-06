@@ -3,7 +3,7 @@ import '../main.css'
 
 export default function Footer() {
     return (
-        <footer className="flex flex-row items-center justify-between py-[25px] px-[160px]  bg-back-footer dark:bg-components-dark text-color-dark dark:text-color-dark" >
+        <footer className="flex flex-row items-center justify-between py-[25px] px-[80px]  bg-back-footer dark:bg-components-dark text-color-dark dark:text-color-dark" >
             <h1 className="text-lg font-bold">LOGO EMPRESA</h1>
             <nav className="w-4/12">
                 <ul className="list-none flex flex-col items-center space-y-2">

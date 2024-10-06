@@ -22,7 +22,7 @@ export default function Header() {
     }
 
     return (
-        <header className="flex flex-row items-center justify-between py-[25px] px-[160px]  border-b border-border-light dark:border-border-dark bg-back-light dark:bg-components-dark text-color-light dark:text-color-dark" >
+        <header className="flex flex-row items-center justify-between sm:py-[25px] sm:px-[80px]  border-b border-border-light dark:border-border-dark bg-back-light dark:bg-components-dark text-color-light dark:text-color-dark py-[25px] px-[80px]" >
             <h1>LOGO EMPRESA</h1>
             <nav className={classNav}>
                 <ul className="flex list-none sm:flex-row sm:items-center sm:justify-between flex-col ">
