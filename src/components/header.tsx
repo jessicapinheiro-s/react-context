@@ -7,19 +7,12 @@ import { motion } from "framer-motion";
 import ThemeIcon from "./theme-Icon";
 
 export default function Header() {
-    const { valueTheme } = UseMyThemeContext();
 
-    const themeStyles = {
-        Light: { background: '#fff', color: '#000' },
-        Dark: { background: '#313131', color: '#e5e5e5', border: 'none' },
-    };
-
-   
     return (
-        <header className="flex flex-row items-center justify-between py-[25px] px-[160px] bg-gray-20 border-b" style={themeStyles[valueTheme]}>
+        <header className="flex flex-row items-center justify-between py-[25px] px-[160px]  border-b" >
             <h1>LOGO EMPRESA</h1>
             <nav className="w-4/12">
-                <ul className="flex list-none flex flex-row items-center justify-between">
+                <ul className="flex list-none flex-row items-center justify-between">
                     <li><Link to="/"> Home</Link></li>
                     <li> <Link to="/pages/sobre">Sobre</Link></li>
                     <li><Link to="/pages/suport">Suport</Link></li>
