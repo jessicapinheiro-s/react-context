@@ -8,10 +8,16 @@ export default function ThemeIcon() {
     const { setThemeValue, valueTheme } = UseMyThemeContext();
 
     function handleTheme() {
-        window.document.getElementById("root")?.classList.toggle("dark")
         setKey(prevKey => prevKey + 1);
-        valueTheme === "Light" ? setThemeValue("Dark") : setThemeValue("Light")
+        valueTheme === "Light" ? setThemeValue("Dark") : setThemeValue("Light");
+
+        if(valueTheme === 'Dark'){
+            window.document.getElementById("root")?.classList.toggle( 'dark' );
+        }else{
+            window.document.getElementById("root")?.classList.toggle( 'light');
+        }
     }
+    localStorage.setItem("Theme", valueTheme);
     return (
         <motion.div
             key={key}

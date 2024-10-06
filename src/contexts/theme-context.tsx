@@ -18,7 +18,14 @@ const ThemeContext = createContext<ThemeType | undefined>(undefined);
 
 //provider
 export const ProviderThemeContext = ({ children }: MyContextProviderProps) => {
-    const [valueTheme, setThemeValue] = useState<Theme>('Light');
+    const valueThemeLocal = localStorage.getItem("Theme") as Theme;
+    const [valueTheme, setThemeValue] = useState<Theme>(valueThemeLocal ? valueThemeLocal : 'Light');
+
+    if(valueTheme === 'Dark'){
+        window.document.getElementById("root")?.classList.add( 'dark' );
+    }else{
+        window.document.getElementById("root")?.classList.add( 'light');
+    }
 
     return (
         <ThemeContext.Provider value={{ valueTheme, setThemeValue }}>
