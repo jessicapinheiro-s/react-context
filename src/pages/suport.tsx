@@ -1,9 +1,9 @@
 import { Apple, BugOff, ChartColumnIncreasing, Check, LockKeyhole } from "lucide-react";
-import { CardIcon } from "../components/card-icon";
-import { ContainerBig } from "../components/container-big";
-import Header from "../components/header";
-import { UseMyThemeContext } from "../contexts/theme-context";
-import Footer from "../components/footer";
+import { CardIcon } from "../components/Card-icon";
+import { ContainerBig } from "../components/Container-big";
+import Header from "../components/Header";
+import { UseMyThemeContext } from "../contexts/Theme-context";
+import Footer from "../components/Footer";
 
 
 
@@ -14,7 +14,7 @@ export default function Suport() {
         <div className='h-full'>
             <Header />
             <ContainerBig Title={"Support"} Description={text} />
-            <div className="flex justify-between mx-40 mb-2.5">
+            <div className="flex justify-between mx-40 mb-2.5 py-[25px]">
                 <CardIcon Title={"Segurança"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<LockKeyhole />}/>
                 <CardIcon Title={"Melhores Práticas"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<BugOff />}/>
                 <CardIcon Title={"Flexibilidade"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<Check />}/>

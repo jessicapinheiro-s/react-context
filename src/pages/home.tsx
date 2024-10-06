@@ -1,19 +1,19 @@
-import Header from '../components/header';
-import { ContainerBig } from '../components/container-big';
+import Header from '../components/Header';
+import { ContainerBig } from '../components/Container-big';
 import { LockKeyhole, BugOff, Check, ChartColumnIncreasing } from 'lucide-react';
-import { CardIcon } from '../components/card-icon';
-import { ContainerBigDuplo } from '../components/container-duplo';
-import { ContainerImg } from '../components/container-img';
+import { CardIcon } from '../components/Card-icon';
+import { ContainerBigDuplo } from '../components/Container-duplo';
+import { ContainerImg } from '../components/Container-img';
 import img from '../imgs/11240811.jpg';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 
 function Home() {
 
     return (
-        <div>
+        <div className='h-full  bg-back-light dark:bg-back-dark text-color-light dark:text-color-dark'>
             <Header />
             <ContainerBig Title={"Home"} Description={"This is a home page wich the principal function is.."} />
-            <div className="flex justify-between mx-40 mb-2.5">
+            <div className="flex justify-between mx-40 mb-2.5 py-[25px]">
                 <CardIcon Title={"Segurança"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<LockKeyhole />} />
                 <CardIcon Title={"Melhores Práticas"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<BugOff />} />
                 <CardIcon Title={"Flexibilidade"} Description={"This is just a testa, please ignore that. This is just a test, just ignore that, it is irrelevant"} Icon={<Check />} />

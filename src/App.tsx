@@ -1,16 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
-import { UseMyThemeContext } from './contexts/theme-context';
-import Home from './pages/home';
-import Sobre from './pages/sobre';
-import Suport from './pages/suport';
-import Login from './pages/login';
-import SignIn from './pages/signIn';
+import { UseMyThemeContext } from './contexts/Theme-context';
+import Home from './pages/Home';
+import Sobre from './pages/Sobre';
+import Suport from './pages/Suport';
+import Login from './pages/Login';
+import SignIn from './pages/SignIn';
 
 
 
 function App() {
   return (
-    <div className='h-full bg-white dark:bg-gray-900 text-black dark:text-white' >
+    <div className=' bg-back-light dark:bg-back-dark text-color-light dark:text-color-dark min-h-screen' >
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pages/sobre" element={<Sobre />} />

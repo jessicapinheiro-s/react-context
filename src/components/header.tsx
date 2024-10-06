@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { UseMyThemeContext } from "../contexts/theme-context"
+import { UseMyThemeContext } from "../contexts/Theme-context"
 import { Link } from "react-router-dom";
 import '../main.css'
 import { Moon, SunMoon } from "lucide-react";
 import { motion } from "framer-motion";
-import ThemeIcon from "./theme-Icon";
+import ThemeIcon from "./Theme-Icon";
 
 export default function Header() {
 
     return (
-        <header className="flex flex-row items-center justify-between py-[25px] px-[160px]  border-b" >
+        <header className="flex flex-row items-center justify-between py-[25px] px-[160px]  border-b border-border-light dark:border-border-dark bg-back-light dark:bg-components-dark text-color-light dark:text-color-dark" >
             <h1>LOGO EMPRESA</h1>
             <nav className="w-4/12">
                 <ul className="flex list-none flex-row items-center justify-between">

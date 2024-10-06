@@ -5,7 +5,7 @@ import './index.css';
 import './main.css';
 
 
-import { ProviderThemeContext } from './contexts/theme-context';
+import { ProviderThemeContext } from './contexts/Theme-context';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
