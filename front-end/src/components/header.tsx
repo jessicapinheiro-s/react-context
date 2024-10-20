@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import '../main.css'
 import { CircleX, Menu } from "lucide-react";
-import { motion } from "framer-motion";
 import ThemeIcon from "./Theme-Icon";
+import Login from '../../../front-end/src/pages/Login'
 
 export default function Header() {
     const styleLiMobile = 'py-[10px] px-[40px] hover:bg-back-button-orange sm:p-0 sm:hover:bg-transparent';
@@ -27,10 +27,10 @@ export default function Header() {
                 <ul className="flex list-none sm:flex-row sm:items-center sm:justify-between flex-col ">
                     <span className='block h-8 py-[20px] px-[40px] sm:hidden'>Olá user</span>
                     <li className={styleLiMobile}><Link className={styleLiLink} to="/"> Home</Link></li>
-                    <li className={styleLiMobile}> <Link className={styleLiLink} to="/">Sobre</Link></li>
-                    <li className={styleLiMobile}><Link className={styleLiLink} to="/pages/Suport">Suport</Link></li>
-                    <li className={styleLiMobile}><Link className={styleLiLink} to="./pages/Login">Login</Link></li>
-                    <li className={styleLiMobile}><Link className={styleLiLink} to="/pages/SignIn">Sign In</Link></li>
+                    <li className={styleLiMobile}> <Link className={styleLiLink} to="/Sobre">Sobre</Link></li>
+                    <li className={styleLiMobile}><Link className={styleLiLink} to="/Suport">Suport</Link></li>
+                    <li className={styleLiMobile}><Link className={styleLiLink} to="/Login">Login</Link></li>
+                    <li className={styleLiMobile}><Link className={styleLiLink} to="/SignIn">Sign In</Link></li>
                     <li className='h-8 py-[10px] px-[40px] sm:hidden'><CircleX onClick={closeMenu} /></li>
                     <li className='h-8 py-[10px] px-[40px] sm:hidden'><ThemeIcon  /></li>
                 </ul>

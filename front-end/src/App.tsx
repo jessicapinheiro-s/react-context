@@ -11,10 +11,10 @@ function App() {
     <div className=' bg-back-light dark:bg-back-dark text-color-light dark:text-color-dark min-h-screen' >
       <Routes>
       <Route path="/" element={<Home />} />
-        <Route path="./src/pages/Sobre" element={<Sobre />} />
-        <Route path="./src/pages/Suport" element={<Suport />} />
-        <Route path="./src/pages/Login" element={<Login />} />
-        <Route path="./src/pages/SignIn" element={<SignIn />} />
+      <Route path="/Sobre" element={<Sobre />} />
+      <Route path="/Suport" element={<Suport />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/SignIn" element={<SignIn />} />
       </Routes>
     </div >
   );
