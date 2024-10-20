@@ -1,4 +1,5 @@
 import { LockKeyhole, Mail } from "lucide-react";
+import React from "react";
 
 interface PropsForm {
     Type: string;

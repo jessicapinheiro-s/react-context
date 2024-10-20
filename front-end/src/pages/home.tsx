@@ -4,8 +4,9 @@ import { LockKeyhole, BugOff, Check, ChartColumnIncreasing } from 'lucide-react'
 import { CardIcon } from '../components/Card-icon';
 import { ContainerBigDuplo } from '../components/Container-duplo';
 import { ContainerImg } from '../components/Container-img';
-import img from '../imgs/11240811.jpg';
+import img from '../../src/imgs/11240811.jpg';
 import Footer from '../components/Footer';
+import React from 'react';
 
 function Home() {
 

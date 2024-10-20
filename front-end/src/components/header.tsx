@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { UseMyThemeContext } from "../contexts/Theme-context"
 import { Link } from "react-router-dom";
 import '../main.css'
-import { CircleX, Menu, Moon, SunMoon } from "lucide-react";
+import { CircleX, Menu } from "lucide-react";
 import { motion } from "framer-motion";
 import ThemeIcon from "./Theme-Icon";
 
 export default function Header() {
     const styleLiMobile = 'py-[10px] px-[40px] hover:bg-back-button-orange sm:p-0 sm:hover:bg-transparent';
     const styleLiLink = 'w-full block';
-    const [classNav, setClassNav] = useState('sm:w-4/12 absolute top-0 bottom-0 right-0 w-8/12 sm:relative sm:bg-transparent bg-components-dark z-10 hidden');
+    const [classNav, setClassNav] = useState('sm:w-4/12 absolute top-0 bottom-0 right-0 w-8/12 sm:relative sm:bg-transparent bg-components-dark z-10');
     
     function openMenu(event: React.MouseEvent<SVGSVGElement>): void {
         event.stopPropagation();
@@ -28,10 +27,10 @@ export default function Header() {
                 <ul className="flex list-none sm:flex-row sm:items-center sm:justify-between flex-col ">
                     <span className='block h-8 py-[20px] px-[40px] sm:hidden'>Olá user</span>
                     <li className={styleLiMobile}><Link className={styleLiLink} to="/"> Home</Link></li>
-                    <li className={styleLiMobile}> <Link className={styleLiLink} to="/pages/sobre">Sobre</Link></li>
-                    <li className={styleLiMobile}><Link className={styleLiLink} to="/pages/suport">Suport</Link></li>
-                    <li className={styleLiMobile}><Link className={styleLiLink} to="/pages/login">Login</Link></li>
-                    <li className={styleLiMobile}><Link className={styleLiLink} to="/pages/signIn">Sign In</Link></li>
+                    <li className={styleLiMobile}> <Link className={styleLiLink} to="/">Sobre</Link></li>
+                    <li className={styleLiMobile}><Link className={styleLiLink} to="/pages/Suport">Suport</Link></li>
+                    <li className={styleLiMobile}><Link className={styleLiLink} to="./pages/Login">Login</Link></li>
+                    <li className={styleLiMobile}><Link className={styleLiLink} to="/pages/SignIn">Sign In</Link></li>
                     <li className='h-8 py-[10px] px-[40px] sm:hidden'><CircleX onClick={closeMenu} /></li>
                     <li className='h-8 py-[10px] px-[40px] sm:hidden'><ThemeIcon  /></li>
                 </ul>

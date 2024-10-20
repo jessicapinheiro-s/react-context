@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { UseMyThemeContext } from "../contexts/Theme-context";
 import { Moon, SunMoon } from "lucide-react";
+import React from "react";
 
 export default function ThemeIcon() {
     const [key, setKey] = useState(0);
