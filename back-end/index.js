@@ -1,17 +1,26 @@
-//config database conection
 const express = require('express');
+const { json } = require('express');
 const { Pool } = require('pg');
+require('dotenv').config({ path: './sensitive.env' });
 
+
+const dbUser = process.env.DATABASEUSER;
+const dbPassword = process.env.DATABASEPASSWORD;
+
+console.log(dbUser, dbPassword);
+
+//config database conection
 const pool = new Pool({
-    user: 'admin',       // Usuário do PostgreSQL
+    user: dbUser,       // Usuário do PostgreSQL
     host: 'localhost',         // Endereço do PostgreSQL
     database: 'contextUsersProject',     // Nome do banco de dados
-    password: 'admin123',     // Senha do usuário
+    password: dbPassword,     // Senha do usuário
     port: 5432,
 });
 
+
 const app = express();
-app.use(express.json());
+app.use(json());
 
 // Testando a conexão
 app.get('/users', async (req, res) => {
@@ -24,7 +33,7 @@ app.get('/users', async (req, res) => {
     }
 });
 
-app.post('/users', async (req, res) => {
+app.post('/addUser', async (req, res) => {
     try {
         const result = await pool.query(
             'INSERT INRO users (id,email,senha,data_cadastro) VALUES ($1, $2, $3, $4) RETURNING *', 
